@@ -1,0 +1,33 @@
+const people = [
+  { id: "pe-voters-google", label: "EPIC Voter List Dork (Google)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Avoters.eci.gov.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-voters-bing", label: "EPIC Voter List Dork (Bing)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.bing.com/search?q=site%3Avoters.eci.gov.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-voters-yandex", label: "EPIC Voter List Dork (Yandex)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://yandex.com/search/?text=site%3Avoters.eci.gov.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-ecourts-google", label: "eCourts Case Dork (Google)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Aecourts.gov.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-ecourts-bing", label: "eCourts Case Dork (Bing)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.bing.com/search?q=site%3Aecourts.gov.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-mca-google", label: "MCA Company Dork (Google)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Amca.gov.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-mca-director-zauba-dork", label: "MCA Director Search (ZaubaCorp Dork)", tag: "Search", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Azaubacorp.com+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-mca-director-tofler-dork", label: "MCA Director Search (Tofler Dork)", tag: "Search", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Atofler.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-pan-google", label: "PAN Registry Info Dork (Google)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Aincometax.gov.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-epfo-google", label: "EPFO Employee Dork (Google)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Aepfindia.gov.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-gazette-google", label: "e-Gazette India Dork (Google)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Aegazette.gov.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-linkedin-google", label: "LinkedIn India Dork (Google)", tag: "Social", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Ain.linkedin.com%2Fin%2F+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-linkedin-bing", label: "LinkedIn India Dork (Bing)", tag: "Social", status: "active", inputs: ["name"], url: (n) => `https://www.bing.com/search?q=site%3Ain.linkedin.com%2Fin%2F+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-naukri-google", label: "Naukri Resume Match (Google)", tag: "Commercial", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Anaukri.com+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-shine-google", label: "Shine Resume Match (Google)", tag: "Commercial", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Ashine.com+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-indeed-google", label: "Indeed Resume Match (Google)", tag: "Commercial", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Aindeed.co.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-quora-google", label: "Quora Discussions Dork (Google)", tag: "Social", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Aquora.com+%22${encodeURIComponent(n)}%22+India` },
+  { id: "pe-github-users", label: "GitHub Users Lookup", tag: "Social", status: "active", inputs: ["name"], url: (n) => `https://github.com/search?q=${encodeURIComponent(n)}&type=users` },
+  { id: "pe-ias-google", label: "IAS Civil List Dork (Google)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Apersmin.gov.in+IAS+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-ips-google", label: "IPS Civil List Dork (Google)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Aips.gov.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-press-google", label: "Indian Press Dork (Google)", tag: "News", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=%22${encodeURIComponent(n)}%22+(site:timesofindia.indiatimes.com+OR+site:thehindu.com+OR+site:indianexpress.com+OR+site:livemint.com+OR+site:moneycontrol.com+OR+site:ndtv.com+OR+site:indiatoday.in)` },
+  { id: "pe-press-bing", label: "Indian Press Dork (Bing)", tag: "News", status: "active", inputs: ["name"], url: (n) => `https://www.bing.com/search?q=%22${encodeURIComponent(n)}%22+(site:timesofindia.indiatimes.com+OR+site:thehindu.com+OR+site:indianexpress.com+OR+site:livemint.com+OR+site:moneycontrol.com+OR+site:ndtv.com+OR+site:indiatoday.in)` },
+  { id: "pe-socialsearcher", label: "SocialSearcher Name Scan", tag: "Social", status: "active", inputs: ["name"], url: (n) => `https://www.social-searcher.com/search-users/?q6=${encodeURIComponent(n)}` },
+  { id: "pe-facebook-search", label: "Facebook Name Search", tag: "Social", status: "active", inputs: ["name"], url: (n) => `https://www.facebook.com/search/people/?q=${encodeURIComponent(n)}` },
+  { id: "pe-instagram-search", label: "Instagram Name Search", tag: "Social", status: "active", inputs: ["name"], url: (n) => `https://www.instagram.com/search/?q=${encodeURIComponent(n)}` },
+  { id: "pe-vidwan-google", label: "Vidwan Academic Search (Google)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Avidwan.inflibnet.ac.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-shodhganga-google", label: "Shodhganga Thesis Dork (Google)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Ashodhganga.inflibnet.ac.in+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-wanted-google", label: "CBI Wanted List Dork (Google)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Acbi.gov.in+wanted+%22${encodeURIComponent(n)}%22` },
+  { id: "pe-delhipolice-google", label: "Delhi Police Missing/Wanted (Google)", tag: "Government", status: "active", inputs: ["name"], url: (n) => `https://www.google.com/search?q=site%3Adelhipolice.gov.in+%22${encodeURIComponent(n)}%22` }
+];
+
+export default people;

@@ -1,0 +1,28 @@
+const property = [
+  { id: "bhulekh-up-g", label: "Uttar Pradesh Land Records Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Abhulekh.up.nic.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-up-b", label: "Uttar Pradesh Land Records Bing Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.bing.com/search?q=site%3Abhulekh.up.nic.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-mah-g", label: "Maharashtra Land Records Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Abhulekh.maharashtra.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-mah-b", label: "Maharashtra Land Records Bing Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.bing.com/search?q=site%3Abhulekh.maharashtra.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-kar-g", label: "Karnataka Land Records Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Alandrecords.karnataka.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-guj-g", label: "Gujarat Land Records Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Aanyror.gujarat.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-raj-g", label: "Rajasthan Land Records Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Aapnakhata.rajasthan.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-wb-g", label: "West Bengal Land Records Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Abanglarbhumi.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-ap-g", label: "Andhra Pradesh Land Records Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Ameebhoomi.ap.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-tel-g", label: "Telangana Land Records Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Adharani.telangana.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-bihar-g", label: "Bihar Land Records Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Abiharbhumi.bihar.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-mp-g", label: "Madhya Pradesh Land Records Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Ampbhulekh.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-har-g", label: "Haryana Land Records Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Ajamabandi.nic.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhulekh-punjab-g", label: "Punjab Land Records Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Ajamabandi.punjab.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "igrs-up-g", label: "Uttar Pradesh Property Registry Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Aigrsup.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "igrs-mah-g", label: "Maharashtra Property Registration Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Aigrmaharashtra.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "doris-delhi-g", label: "Delhi Property Registration Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Adoris.delhi.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "magicbricks-search", label: "MagicBricks Properties", tag: "Commercial", status: "active", inputs: ["address"], url: (a) => `https://www.magicbricks.com/property/search?proptype=Residential&cityName=${encodeURIComponent(a)}` },
+  { id: "acres99-search", label: "99acres Properties", tag: "Commercial", status: "active", inputs: ["address"], url: (a) => `https://www.99acres.com/search/property/residential?src=CLP&q=${encodeURIComponent(a)}` },
+  { id: "housing-search", label: "Housing.com Properties", tag: "Commercial", status: "active", inputs: ["address"], url: (a) => `https://housing.com/search?q=${encodeURIComponent(a)}` },
+  { id: "nobroker-search", label: "NoBroker Properties", tag: "Commercial", status: "active", inputs: ["address"], url: (a) => `https://www.nobroker.in/property/search?searchParam=${encodeURIComponent(a)}` },
+  { id: "google-maps-pin", label: "Google Maps Navigation", tag: "Search", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/maps/search/${encodeURIComponent(a)}` },
+  { id: "india-post-pincode-g", label: "India Post Pincode Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Aindiapost.gov.in+%22${encodeURIComponent(a)}%22` },
+  { id: "bhuvan-isro-g", label: "Bhuvan ISRO Land Map Google Dork", tag: "Government", status: "active", inputs: ["address"], url: (a) => `https://www.google.com/search?q=site%3Abhuvan.nrsc.gov.in+%22${encodeURIComponent(a)}%22` }
+];
+
+export default property;
